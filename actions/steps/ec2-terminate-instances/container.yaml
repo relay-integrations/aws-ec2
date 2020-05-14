@@ -1,0 +1,6 @@
+apiVersion: container/v1
+kind: StepContainer
+inherit: ../hack/defs/aws-python
+title: Terminates AWS EC2 instances
+description: >
+  This task terminates a given list of EC2 instances.
