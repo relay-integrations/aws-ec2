@@ -16,16 +16,20 @@ def instance_to_dict(ec2, instance):
     return d
 
 
-ni = Interface()
+relay = Interface()
 
 sess = boto3.Session(
-  aws_access_key_id=ni.get(D.aws.accessKeyID),
-  aws_secret_access_key=ni.get(D.aws.secretAccessKey),
-  region_name=ni.get(D.aws.region),
+  aws_access_key_id=relay.get(D.aws.connection.accessKeyID),
+  aws_secret_access_key=relay.get(D.aws.connection.secretAccessKey),
+  region_name=relay.get(D.aws.region),
 )
 ec2 = sess.resource('ec2')
-
+raw_instances = ec2.instances.all()
+print('Found the following EC2 instances:\n')
+print("{:<30} {:<30} {:<30} {:<30} {:<30}".format('ID', 'STATE', 'TYPE', 'VPC', 'KEY PAIR'))
+for instance in raw_instances:
+  print("{:<30} {:<30} {:<30} {:<30} {:<30}".format(instance.instance_id, instance.state['Name'], instance.instance_type, instance.vpc_id, instance.key_name))
 instances = list(map(partial(instance_to_dict, ec2), ec2.instances.all()))
 
-print('Adding {0} instance(s) to the output `instances`'.format(len(instances)))
-ni.outputs.set('instances', instances)
+print('\nAdding {0} instance(s) to the output `instances`'.format(len(instances)))
+relay.outputs.set('instances', instances)

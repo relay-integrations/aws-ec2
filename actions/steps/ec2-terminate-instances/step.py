@@ -3,15 +3,16 @@ import boto3
 from nebula_sdk import Interface, Dynamic as D
 
 
-ni = Interface()
+relay = Interface()
 
 sess = boto3.Session(
-  aws_access_key_id=ni.get(D.aws.accessKeyID),
-  aws_secret_access_key=ni.get(D.aws.secretAccessKey),
-  region_name=ni.get(D.aws.region),
+  aws_access_key_id=relay.get(D.aws.connection.accessKeyID),
+  aws_secret_access_key=relay.get(D.aws.connection.secretAccessKey),
+  region_name=relay.get(D.aws.region),
 )
 ec2 = sess.resource('ec2')
 
-instanceIDs = ni.get(D.instanceIDs)
+instanceIDs = relay.get(D.instanceIDs)
+print('Terminating instances: {}'.format(instanceIDs))
 if len(instanceIDs) > 0:
     ec2.instances.filter(InstanceIds=instanceIDs).terminate()
