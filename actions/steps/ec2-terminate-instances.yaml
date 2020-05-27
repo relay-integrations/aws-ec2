@@ -11,7 +11,7 @@ name: ec2-terminate-instances
 
 # The version of the action. Required. Must be an integer. If specified in the
 # directory name, must be exactly the version in the directory name.
-version: 3
+version: 1
 
 # High-level phrase describing what this action does. Required.
 summary: 

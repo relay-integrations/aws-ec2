@@ -4,10 +4,10 @@ FROM python:3-alpine
 RUN apk --no-cache add bash ca-certificates curl git jq openssh && update-ca-certificates
 RUN pip --no-cache-dir install "https://packages.nebula.puppet.net/sdk/support/python/v1/nebula_sdk-1-py3-none-any.whl"
 RUN pip --no-cache-dir install boto3
-COPY "./step.py" "/nebula/step-ec2-stop-instances.py"
+COPY "./step.py" "/nebula/step-ec2-describe-key-pairs.py"
 ENTRYPOINT []
-CMD ["python3", "/nebula/step-ec2-stop-instances.py"]
+CMD ["python3", "/nebula/step-ec2-describe-key-pairs.py"]
 
-LABEL "org.opencontainers.image.title"="Terminates AWS EC2 instances"
-LABEL "org.opencontainers.image.description"="This task stops a given list of EC2 instances."
+LABEL "org.opencontainers.image.title"="Describe AWS EC2 Key Pairs"
+LABEL "org.opencontainers.image.description"="This task describes the EC2 Key Pairs in a given account."
 LABEL "com.puppet.nebula.sdk.version"="v1"

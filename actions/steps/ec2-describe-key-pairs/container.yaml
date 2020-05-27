@@ -1,6 +1,6 @@
 apiVersion: container/v1
 kind: StepContainer
 inherit: ../hack/defs/aws-python
-title: Terminates AWS EC2 instances
+title: Describe AWS EC2 Key Pairs
 description: >
-  This task terminates a given list of EC2 instances.
+  This task describes the EC2 Key Pairs in a given account.
