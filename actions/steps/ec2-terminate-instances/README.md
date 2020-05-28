@@ -1,7 +1,29 @@
 # ec2-terminate-instances
 
-This step container terminates EC2 instances given a list of instance IDs.
+This [AWS EC2](https://aws.amazon.com/ec2/) step container requests that the a
+set of given instances terminate immediately.
 
-## Documentation
+## Specification
 
-* [Version 1.x](docs/v1.md)
+| Setting | Child setting | Data type | Description | Default | Required |
+|---------|---------------|-----------|-------------|---------|----------|
+| `aws` || mapping | A mapping of AWS account configuration. | None | True |
+|| `connection` | AWS Connection | Relay Connection for the AWS account. Use the Connection sidebar to configure the AWS Connection | None | True |
+|| `region` | string | The AWS region to use (for example, `us-west-2`). | None | True |
+| `instanceIDs` || array of string | The list of instance IDs identifying the instances to terminate. | None | True |
+
+## Example
+
+```yaml
+steps:
+# ...
+- name: ec2-terminate-instances
+  image: projectnebula/ec2-terminate-instances
+  spec:
+    aws:
+      connection: !Connection { type: aws, name: my-aws-account }
+      region: us-west-2
+    instanceIDs:
+    - i-0123456789abcdef0
+    - i-abcdef0123456789a
+```

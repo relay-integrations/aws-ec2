@@ -2,17 +2,19 @@
 
 Integration with Amazon Web Services Elastic Compute Cloud for Puppet Relay.
 
-## External requirements
+## Actions
 
-_TBD_
+The following are supported actions: 
 
-## Getting started
+|   Type    |  Name              |
+|-----------|--------------------|
+| Step      | [ec2-delete-key-pairs](/actions/steps/ec2-delete-key-pairs)  | 
+| Step      | [ec2-describe-images](/actions/steps/ec2-describe-images)    | 
+| Step      | [ec2-describe-instances](/actions/steps/ec2-describe-instances) | 
+| Step      | [ec2-describe-key-pairs](/actions/steps/ec2-describe-key-pairs) |  
+| Step      | [ec2-stop-instances](/actions/steps/ec2-stop-instances) |  
+| Step      | [ec2-terminate-instances](/actions/steps/ec2-terminate-instances) |  
 
-_TBD_
-
-## Examples
-
-_TBD_
 
 ## Contributing
 
