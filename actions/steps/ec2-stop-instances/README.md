@@ -1,7 +1,29 @@
 # ec2-stop-instances
 
-This step container stops EC2 instances given a list of instance IDs.
+This [AWS EC2](https://aws.amazon.com/ec2/) step container requests that the a
+set of given instances stop immediately.
 
-## Documentation
+## Specification
 
-* [Version 1.x](docs/v1.md)
+| Setting | Child setting | Data type | Description | Default | Required |
+|---------|---------------|-----------|-------------|---------|----------|
+| `aws` || mapping | A mapping of AWS account configuration. | None | True |
+|| `connection` | AWS Connection | Relay Connection for the AWS account. Use the Connection sidebar to configure the AWS Connection | None | True |
+|| `region` | string | The AWS region to use (for example, `us-west-2`). | None | True |
+| `instanceIDs` || array of string | The list of instance IDs identifying the instances to stop. | None | True |
+
+## Example
+
+```yaml
+steps:
+# ...
+- name: ec2-stop-instances
+  image: projectnebula/ec2-stop-instances
+  spec:
+    aws:
+      connection: !Connection { type: aws, name: my-aws-account }
+      region: us-west-2
+    instanceIDs:
+    - i-0123456789abcdef0
+    - i-abcdef0123456789a
+```
