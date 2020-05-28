@@ -6,14 +6,14 @@ Integration with Amazon Web Services Elastic Compute Cloud for Puppet Relay.
 
 The following are supported actions: 
 
-|   Type    |  Name              | Description          |  
-|-----------|--------------------|----------------------|
-| Step      | [ec2-delete-key-pairs](/actions/steps/ec2-delete-key-pairs)  | Deletes a set of EC2 key pairs |   
-| Step      | [ec2-describe-images](/actions/steps/ec2-describe-images)    | Lists all EC2 images, including metadata, in a given region that are owned by the account. |
-| Step      | [ec2-describe-instances](/actions/steps/ec2-describe-instances) | Lists all EC2 instances, including metadata, in a given region. |
-| Step      | [ec2-describe-key-pairs](/actions/steps/ec2-describe-key-pairs) |  Lists all EC2 key pairs, including metadata, in a given account. | 
-| Step      | [ec2-stop-instances](/actions/steps/ec2-stop-instances) |  Stops a set of EC2 instances | 
-| Step      | [ec2-terminate-instances](/actions/steps/ec2-terminate-instances) |  Terminates a set of EC2 instances |
+|   Type    |  Name              |
+|-----------|--------------------|
+| Step      | [ec2-delete-key-pairs](/actions/steps/ec2-delete-key-pairs)  | 
+| Step      | [ec2-describe-images](/actions/steps/ec2-describe-images)    | 
+| Step      | [ec2-describe-instances](/actions/steps/ec2-describe-instances) | 
+| Step      | [ec2-describe-key-pairs](/actions/steps/ec2-describe-key-pairs) |  
+| Step      | [ec2-stop-instances](/actions/steps/ec2-stop-instances) |  
+| Step      | [ec2-terminate-instances](/actions/steps/ec2-terminate-instances) |  
 
 
 ## Contributing
