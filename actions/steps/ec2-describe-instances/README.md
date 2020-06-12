@@ -11,6 +11,7 @@ information about them.
 | `aws` || mapping | A mapping of AWS account configuration. | None | True |
 || `connection` | AWS Connection | Relay Connection for the AWS account. Use the Connection sidebar to configure the AWS Connection | None | True |
 || `region` | string | The AWS region to use (for example, `us-west-2`). | None | True |
+ 
 
 ## Outputs
 
@@ -27,7 +28,7 @@ steps:
   image: projectnebula/ec2-describe-instances
   spec:
     aws:
-      connection: !Connection { type: aws, name: my-aws-account } 
+      connection: !Connection { type: aws, name: my-aws-account }
       region: us-west-2
 ```
 
