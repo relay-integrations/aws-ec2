@@ -8,12 +8,12 @@ The following are supported actions:
 
 |   Type    |  Name              |
 |-----------|--------------------|
-| Step      | [ec2-delete-key-pairs](/actions/steps/ec2-delete-key-pairs)  | 
-| Step      | [ec2-describe-images](/actions/steps/ec2-describe-images)    | 
-| Step      | [ec2-describe-instances](/actions/steps/ec2-describe-instances) | 
-| Step      | [ec2-describe-key-pairs](/actions/steps/ec2-describe-key-pairs) |  
-| Step      | [ec2-stop-instances](/actions/steps/ec2-stop-instances) |  
-| Step      | [ec2-terminate-instances](/actions/steps/ec2-terminate-instances) |  
+| Step      | [ec2-delete-key-pairs](/steps/ec2-delete-key-pairs)  | 
+| Step      | [ec2-describe-images](/steps/ec2-describe-images)    | 
+| Step      | [ec2-describe-instances](/steps/ec2-describe-instances) | 
+| Step      | [ec2-describe-key-pairs](/steps/ec2-describe-key-pairs) |  
+| Step      | [ec2-stop-instances](/steps/ec2-stop-instances) |  
+| Step      | [ec2-terminate-instances](/steps/ec2-terminate-instances) |  
 
 
 ## Contributing
