@@ -1,7 +1,7 @@
-# aws-ec2-instances-stop
+# aws-ec2-step-instances-terminate
 
 This [AWS EC2](https://aws.amazon.com/ec2/) step container requests that the a
-set of given instances stop immediately.
+set of given instances terminate immediately.
 
 ## Specification
 
@@ -10,15 +10,15 @@ set of given instances stop immediately.
 | `aws` || mapping | A mapping of AWS account configuration. | None | True |
 || `connection` | AWS Connection | Relay Connection for the AWS account. Use the Connection sidebar to configure the AWS Connection | None | True |
 || `region` | string | The AWS region to use (for example, `us-west-2`). | None | True |
-| `instanceIDs` || array of string | The list of instance IDs identifying the instances to stop. | None | True |
+| `instanceIDs` || array of string | The list of instance IDs identifying the instances to terminate. | None | True |
 
 ## Example
 
 ```yaml
 steps:
 # ...
-- name: ec2-stop-instances
-  image: relaysh/aws-ec2-instances-stop
+- name: ec2-terminate-instances
+  image: relaysh/aws-ec2-step-instances-terminate
   spec:
     aws:
       connection: !Connection { type: aws, name: my-aws-account }

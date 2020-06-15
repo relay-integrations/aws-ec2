@@ -1,4 +1,4 @@
-# aws-ec2-images-describe
+# aws-ec2-step-images-describe
 
 This [AWS EC2](https://aws.amazon.com/ec2/) step container lists the images
 in an AWS region that are owned by my account and sets an output, `images`, to an 
@@ -25,7 +25,7 @@ array containing information about them.
 steps:
 # ...
 - name: describe-images
-  image: relaysh/aws-ec2-images-describe
+  image: relaysh/aws-ec2-step-images-describe
   spec:
     aws:
       connection: !Connection { type: aws, name: my-aws-account }
