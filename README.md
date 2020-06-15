@@ -9,11 +9,11 @@ The following are supported actions:
 |   Type    |  Name              |
 |-----------|--------------------|
 | Step      | [aws-ec2-step-key-pairs-delete](/steps/aws-ec2-step-key-pairs-delete)  | 
-| Step      | [aws-ec2-images-describe](/steps/aws-ec2-step-images-describe)    | 
-| Step      | [aws-ec2-instances-describe](/steps/aws-ec2-instances-describe) | 
-| Step      | [aws-ec2-key-pairs-describe](/steps/aws-ec2-key-pairs-describe) |  
-| Step      | [aws-ec2-instances-stop](/steps/aws-ec2-instances-stop) |  
-| Step      | [aws-ec2-instances-terminate](/steps/aws-ec2-instances-terminate) |  
+| Step      | [aws-ec2-step-images-describe](/steps/aws-ec2-step-images-describe)    | 
+| Step      | [aws-ec2-step-instances-describe](/steps/aws-ec2-step-instances-describe) | 
+| Step      | [aws-ec2-step-key-pairs-describe](/steps/aws-ec2-step-key-pairs-describe) |  
+| Step      | [aws-ec2-step-instances-stop](/steps/aws-ec2-step-instances-stop) |  
+| Step      | [aws-ec2-step-instances-terminate](/steps/aws-ec2-step-instances-terminate) |  
 
 
 ## Contributing
