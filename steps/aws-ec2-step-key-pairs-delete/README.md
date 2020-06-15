@@ -1,4 +1,4 @@
-# ec2-delete-key-pairs 
+# aws-ec2-step-key-pairs-delete
 
 This [AWS EC2](https://aws.amazon.com/ec2/) step container deletes a set of key pairs
 in an AWS account given a list of key pair names.
@@ -18,7 +18,7 @@ in an AWS account given a list of key pair names.
 steps:
 # ...
 - name: delete-key-pairs
-  image: projectnebula/ec2-delete-key-pairs
+  image: relaysh/aws-ec2-step-key-pairs-delete
   spec:
    aws:
       connection: !Connection { type: aws, name: my-aws-account }

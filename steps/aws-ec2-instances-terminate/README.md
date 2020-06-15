@@ -1,4 +1,4 @@
-# ec2-terminate-instances
+# aws-ec2-instances-terminate
 
 This [AWS EC2](https://aws.amazon.com/ec2/) step container requests that the a
 set of given instances terminate immediately.
@@ -18,7 +18,7 @@ set of given instances terminate immediately.
 steps:
 # ...
 - name: ec2-terminate-instances
-  image: projectnebula/ec2-terminate-instances
+  image: relaysh/aws-ec2-instances-terminate
   spec:
     aws:
       connection: !Connection { type: aws, name: my-aws-account }

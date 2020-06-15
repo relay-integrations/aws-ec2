@@ -1,4 +1,4 @@
-# ec2-describe-key-pairs 
+# aws-ec2-key-pairs-describe 
 
 This [AWS EC2](https://aws.amazon.com/ec2/) step container lists the key pairs
 in an AWS account and sets an output, `keyPairs`, to an array of key pairs in the
@@ -23,7 +23,7 @@ provided region and account.
 steps:
 # ...
 - name: describe-key-pairs
-  image: projectnebula/ec2-describe-key-pairs
+  image: relaysh/aws-ec2-key-pairs-describe
   spec:
     aws:
       connection: !Connection { type: aws, name: my-aws-account }

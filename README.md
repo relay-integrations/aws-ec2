@@ -8,12 +8,12 @@ The following are supported actions:
 
 |   Type    |  Name              |
 |-----------|--------------------|
-| Step      | [ec2-delete-key-pairs](/steps/ec2-delete-key-pairs)  | 
-| Step      | [ec2-describe-images](/steps/ec2-describe-images)    | 
-| Step      | [ec2-describe-instances](/steps/ec2-describe-instances) | 
-| Step      | [ec2-describe-key-pairs](/steps/ec2-describe-key-pairs) |  
-| Step      | [ec2-stop-instances](/steps/ec2-stop-instances) |  
-| Step      | [ec2-terminate-instances](/steps/ec2-terminate-instances) |  
+| Step      | [aws-ec2-step-key-pairs-delete](/steps/aws-ec2-step-key-pairs-delete)  | 
+| Step      | [aws-ec2-images-describe](/steps/aws-ec2-step-images-describe)    | 
+| Step      | [aws-ec2-instances-describe](/steps/aws-ec2-instances-describe) | 
+| Step      | [aws-ec2-key-pairs-describe](/steps/aws-ec2-key-pairs-describe) |  
+| Step      | [aws-ec2-instances-stop](/steps/aws-ec2-instances-stop) |  
+| Step      | [aws-ec2-instances-terminate](/steps/aws-ec2-instances-terminate) |  
 
 
 ## Contributing

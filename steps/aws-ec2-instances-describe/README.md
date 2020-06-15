@@ -1,4 +1,4 @@
-# ec2-describe-instances
+# aws-ec2-instances-describe
 
 This [AWS EC2](https://aws.amazon.com/ec2/) step container lists the instances
 in an AWS region and sets an output, `instances`, to an array containing
@@ -24,8 +24,8 @@ information about them.
 ```yaml
 steps:
 # ...
-- name: ec2-describe-instances
-  image: projectnebula/ec2-describe-instances
+- name: describe-instances
+  image: relaysh/aws-ec2-instances-describe
   spec:
     aws:
       connection: !Connection { type: aws, name: my-aws-account }

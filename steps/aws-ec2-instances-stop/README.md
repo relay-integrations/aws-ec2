@@ -1,4 +1,4 @@
-# ec2-stop-instances
+# aws-ec2-instances-stop
 
 This [AWS EC2](https://aws.amazon.com/ec2/) step container requests that the a
 set of given instances stop immediately.
@@ -18,7 +18,7 @@ set of given instances stop immediately.
 steps:
 # ...
 - name: ec2-stop-instances
-  image: projectnebula/ec2-stop-instances
+  image: relaysh/aws-ec2-instances-stop
   spec:
     aws:
       connection: !Connection { type: aws, name: my-aws-account }

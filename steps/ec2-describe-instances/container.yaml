@@ -1,6 +1,0 @@
-apiVersion: container/v1
-kind: StepContainer
-inherit: ../hack/defs/aws-python
-title: Describe AWS EC2 instances
-description: >
-  This task describes the EC2 instances in a given account and region.

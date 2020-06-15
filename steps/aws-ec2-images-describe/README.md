@@ -1,4 +1,4 @@
-# ec2-describe-images
+# aws-ec2-images-describe
 
 This [AWS EC2](https://aws.amazon.com/ec2/) step container lists the images
 in an AWS region that are owned by my account and sets an output, `images`, to an 
@@ -24,8 +24,8 @@ array containing information about them.
 ```yaml
 steps:
 # ...
-- name: ec2-describe-images
-  image: projectnebula/ec2-describe-images
+- name: describe-images
+  image: relaysh/aws-ec2-images-describe
   spec:
     aws:
       connection: !Connection { type: aws, name: my-aws-account }
