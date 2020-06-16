@@ -41,9 +41,9 @@ if (len(instance_list) == 0):
     exit(0)
 
 print('Found the following EC2 instances:\n')
-print("{:<30} {:<30} {:<30}".format('ID', 'TYPE', 'VPC'))
+print("{:<30} {:<30} {:<30}".format('ID', 'STATE', 'TYPE'))
 for instance in raw_instances:
-  print("{:<30} {:<30} {:<30}".format(instance.instance_id, instance.instance_type, instance.vpc_id))
+  print("{:<30} {:<30} {:<30}".format(instance.instance_id, instance.state['Name'], instance.instance_type))
 instances = list(map(partial(instance_to_dict, ec2), ec2.instances.all()))
 
 print('\nAdding {0} instance(s) to the output `instances`'.format(len(instances)))
