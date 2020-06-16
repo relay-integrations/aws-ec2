@@ -34,6 +34,12 @@ sess = boto3.Session(
   
 ec2 = sess.resource('ec2')
 raw_instances = ec2.instances.all()
+
+instance_list = [instance for instance in raw_instances]
+if (len(instance_list) == 0):
+    print("No instances found")
+    exit(0)
+
 print('Found the following EC2 instances:\n')
 print("{:<30} {:<30} {:<30} {:<30}".format('ID', 'STATE', 'TYPE', 'VPC'))
 for instance in raw_instances:
