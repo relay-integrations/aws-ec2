@@ -14,6 +14,7 @@ The following are supported actions:
 | Step      | [aws-ec2-step-key-pairs-describe](/steps/aws-ec2-step-key-pairs-describe) |  
 | Step      | [aws-ec2-step-instances-stop](/steps/aws-ec2-step-instances-stop) |  
 | Step      | [aws-ec2-step-instances-terminate](/steps/aws-ec2-step-instances-terminate) |  
+| Step      | [aws-ec2-step-instances-reboot](/steps/aws-ec2-step-instances-reboot) |  
 
 
 ## Contributing
