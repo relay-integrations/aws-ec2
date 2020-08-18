@@ -37,4 +37,4 @@ build:
   kind: Docker
 
 publish:
-  repository: relaysh/aws-ec2-key-pairs-delete
+  repository: relaysh/aws-ec2-step-key-pairs-delete
