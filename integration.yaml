@@ -26,7 +26,7 @@ summary: Amazon Web Services Elastic Compute Cloud
 
 # A paragraph or two describing what this integration does. Optional. Markdown.
 description: |
-    Integration with Amazon Web Services' EC2 service.
+    AWS EC2 is a web service that provides secure, resizable compute capacity in the cloud. It is designed to make web-scale cloud computing easier for developers.
 
 # License information. Optional. If not specified, this integration is assumed
 # to be unlicensed proprietary code. Otherwise, must be a valid SPDX License
@@ -46,3 +46,6 @@ homepage: https://github.com/relay-integrations/relay-aws-ec2
 # URL to this integration's source code. Optional. If the homepage is a GitHub
 # link, may be inferred automatically.
 source: git://github.com/relay-integrations/relay-aws-ec2.git
+
+tags:
+  -aws
