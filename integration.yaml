@@ -48,4 +48,4 @@ homepage: https://github.com/relay-integrations/relay-aws-ec2
 source: git://github.com/relay-integrations/relay-aws-ec2.git
 
 tags:
-  -aws
+  - aws
