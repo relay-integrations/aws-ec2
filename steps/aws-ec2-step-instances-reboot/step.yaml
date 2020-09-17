@@ -19,8 +19,7 @@ summary: Reboot instances
 # Single-paragraph explanation of what this action does in more detail.
 # Optional. Markdown.
 description: |
-  This [AWS EC2](https://aws.amazon.com/ec2/) step container requests that the a
-  set of given instances reboot immediately.
+  Reboots a provided set of EC2 instances.
 
 # URL or path relative to this file to an icon or icons representing this
 # action. Optional. Defaults to the integration icon.

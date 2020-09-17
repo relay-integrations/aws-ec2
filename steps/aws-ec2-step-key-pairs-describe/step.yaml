@@ -19,9 +19,7 @@ summary: Describe key pairs
 # Single-paragraph explanation of what this action does in more detail.
 # Optional. Markdown.
 description: |
-  This [AWS EC2](https://aws.amazon.com/ec2/) step container lists the key pairs
-  in an AWS account and sets an output, `keyPairs`, to an array of key pairs in the
-  provided region and account. 
+  Lists the key pairs in an AWS account.
 
 # URL or path relative to this file to an icon or icons representing this
 # action. Optional. Defaults to the integration icon.
