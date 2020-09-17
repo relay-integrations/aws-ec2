@@ -1,0 +1,17 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"type": "object",
+	"properties": {
+		"instances": {
+			"type": "array",
+			"items": {
+				"type": "object"
+			},
+			"description": "The EC2 instances in the given region."
+		}
+	},
+	"required": [
+		"instances"
+	],
+	"additionalProperties": false
+}

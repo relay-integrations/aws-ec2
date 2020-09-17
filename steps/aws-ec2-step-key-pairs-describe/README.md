@@ -4,19 +4,6 @@ This [AWS EC2](https://aws.amazon.com/ec2/) step container lists the key pairs
 in an AWS account and sets an output, `keyPairs`, to an array of key pairs in the
 provided region and account. 
 
-## Specification
-
-| Setting | Child setting | Data type | Description | Default | Required |
-|---------|---------------|-----------|-------------|---------|----------|
-| `aws` || mapping | A mapping of AWS account configuration. | None | True |
-|| `connection` | AWS Connection | Relay Connection for the AWS account. Use the Connection sidebar to configure the AWS Connection | None | True |
-
-## Outputs
-
-| Name | Data type | Description |
-|------|-----------|-------------|
-| `keyPairs` | array of mappings | List of key pairs in the AWS account and region. |
-
 ## Example
 
 ```yaml
