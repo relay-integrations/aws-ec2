@@ -19,9 +19,7 @@ summary: Describe EC2 instances
 # Single-paragraph explanation of what this action does in more detail.
 # Optional. Markdown.
 description: |
-  This [AWS EC2](https://aws.amazon.com/ec2/) step container lists the instances
-  in an AWS region and sets an output, `instances`, to an array containing
-  information about them.
+  Lists the instances in the provided AWS region.
 
 # URL or path relative to this file to an icon or icons representing this
 # action. Optional. Defaults to the integration icon.

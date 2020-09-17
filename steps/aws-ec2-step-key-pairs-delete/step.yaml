@@ -19,8 +19,7 @@ summary: Delete key pairs
 # Single-paragraph explanation of what this action does in more detail.
 # Optional. Markdown.
 description: |
-  This [AWS EC2](https://aws.amazon.com/ec2/) step container deletes a set of key pairs
-  in an AWS account given a list of key pair names.
+  Deletes a provided list of key pairs.
 
 # URL or path relative to this file to an icon or icons representing this
 # action. Optional. Defaults to the integration icon.
