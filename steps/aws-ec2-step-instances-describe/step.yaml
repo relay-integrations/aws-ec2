@@ -14,12 +14,14 @@ name: aws-ec2-step-instances-describe
 version: 1
 
 # High-level phrase describing what this action does. Required.
-summary: Describe instances
+summary: Describe EC2 instances
 
 # Single-paragraph explanation of what this action does in more detail.
 # Optional. Markdown.
 description: |
-
+  This [AWS EC2](https://aws.amazon.com/ec2/) step container lists the instances
+  in an AWS region and sets an output, `instances`, to an array containing
+  information about them.
 
 # URL or path relative to this file to an icon or icons representing this
 # action. Optional. Defaults to the integration icon.
@@ -38,3 +40,11 @@ build:
 
 publish:
   repository: relaysh/aws-ec2-step-instances-describe
+
+schemas:
+  spec: 
+    source: file
+    file: spec.schema.json
+  output:
+    source: file
+    file: output.schema.json
