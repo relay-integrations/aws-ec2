@@ -34,10 +34,18 @@
           "connection",
           "region"
         ]
+      },
+      "instanceIDs": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "The list of EC2 instance IDs identifying the instances to reboot."
       }
     },
     "required": [
-      "aws"
+      "aws",
+      "instanceIDs"
     ],
     "additionalProperties": false
   }

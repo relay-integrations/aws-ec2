@@ -3,15 +3,6 @@
 This [AWS EC2](https://aws.amazon.com/ec2/) step container requests that the a
 set of given instances reboot immediately.
 
-## Specification
-
-| Setting | Child setting | Data type | Description | Default | Required |
-|---------|---------------|-----------|-------------|---------|----------|
-| `aws` || mapping | A mapping of AWS account configuration. | None | True |
-|| `connection` | AWS Connection | Relay Connection for the AWS account. Use the Connection sidebar to configure the AWS Connection | None | True |
-|| `region` | string | The AWS region to use (for example, `us-west-2`). | None | True |
-| `instanceIDs` || array of string | The list of instance IDs identifying the instances to reboot. | None | True |
-
 ## Example
 
 ```yaml
