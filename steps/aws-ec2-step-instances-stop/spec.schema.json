@@ -40,7 +40,7 @@
 			"items": {
 				"type": "string"
 			},
-			"description": "The list of EC2 instance IDs identifying the instances to reboot."
+			"description": "The list of EC2 instance IDs identifying the instances to stop."
 		}
 	},
 	"required": [

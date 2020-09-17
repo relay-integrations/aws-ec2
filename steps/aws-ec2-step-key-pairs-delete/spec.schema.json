@@ -35,17 +35,17 @@
 				"region"
 			]
 		},
-		"instanceIDs": {
+		"keyPairNames": {
 			"type": "array",
 			"items": {
 				"type": "string"
 			},
-			"description": "The list of EC2 instance IDs identifying the instances to reboot."
+			"description": "The list of EC2 key pair names identifying the key pairs to delete."
 		}
 	},
 	"required": [
 		"aws",
-		"instanceIDs"
+		"keyPairNames"
 	],
 	"additionalProperties": false
 }
