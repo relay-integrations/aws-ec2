@@ -4,21 +4,6 @@ This [AWS EC2](https://aws.amazon.com/ec2/) step container lists the images
 in an AWS region that are owned by my account and sets an output, `images`, to an 
 array containing information about them. 
 
-
-## Specification
-
-| Setting | Child setting | Data type | Description | Default | Required |
-|---------|---------------|-----------|-------------|---------|----------|
-| `aws` || mapping | A mapping of AWS account configuration. | None | True |
-|| `connection` | AWS Connection | Relay Connection for the AWS account. Use the Connection sidebar to configure the AWS Connection | None | True |
-|| `region` | string | The AWS region to use (for example, `us-west-2`). | None | True |
-
-## Outputs
-
-| Name | Data type | Description |
-|------|-----------|-------------|
-| `images` | array of mappings | The images in the given region owned by the provided account. |
-
 ## Example
 
 ```yaml
