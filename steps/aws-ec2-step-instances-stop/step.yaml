@@ -43,3 +43,41 @@ schemas:
   spec: 
     source: file
     file: spec.schema.json
+
+examples:
+- summary: Stop a single EC2 instance 
+  content:
+    apiVersion: v1
+    kind: Step
+    name: ec2-stop-instances
+    image: relaysh/aws-ec2-step-instances-stop
+    spec:
+      aws:
+        connection: !Connection { type: aws, name: my-aws-account }
+        region: us-west-2
+      instanceIDs:
+      - !Parameter instance-id
+- summary: Stop multiple EC2 instances (from list)
+  content:
+    apiVersion: v1
+    kind: Step
+    name: ec2-stop-instances
+    image: relaysh/aws-ec2-step-instances-stop
+    spec:
+      aws:
+        connection: !Connection { type: aws, name: my-aws-account }
+        region: us-west-2
+      instanceIDs:
+      - i-0123456789abcdef0
+      - i-abcdef0123456789a
+- summary: Stop multiple EC2 instances (from step output)
+  content:
+    apiVersion: v1
+    kind: Step
+    name: ec2-stop-instances
+    image: relaysh/aws-ec2-step-instances-stop
+    spec:
+      aws:
+        connection: !Connection { type: aws, name: my-aws-account }
+        region: us-west-2
+      instanceIDs: !Output {from: describe-instances, name: instanceIDs} # Modify with the Step that outputs instances
