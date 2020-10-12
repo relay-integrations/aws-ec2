@@ -46,3 +46,15 @@ schemas:
   output:
     source: file
     file: output.schema.json 
+
+examples:
+- summary: Describe EC2 images
+  content:
+    apiVersion: v1
+    kind: Step
+    name: describe-images
+    image: relaysh/aws-ec2-step-images-describe
+    spec:
+      aws:
+        connection: !Connection { type: aws, name: my-aws-account }
+        region: us-west-2

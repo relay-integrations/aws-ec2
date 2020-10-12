@@ -43,3 +43,28 @@ schemas:
   spec: 
     source: file
     file: spec.schema.json
+
+examples:
+- summary: Delete a single EC2 key pair
+  content:
+    apiVersion: v1
+    kind: Step
+    name: delete-key-pair
+    image: relaysh/aws-ec2-step-key-pairs-delete
+    spec:
+    aws:
+        connection: !Connection { type: aws, name: my-aws-account }
+    keyPairNames:
+    - !Parameter key-pair
+- summary: Delete multiple EC2 key pairs (from list)
+  content:
+    apiVersion: v1
+    kind: Step
+    name: delete-key-pairs
+    image: relaysh/aws-ec2-step-key-pairs-delete
+    spec:
+    aws:
+        connection: !Connection { type: aws, name: my-aws-account }
+    keyPairNames:
+    - key.pair.1 # Insert your key pairs here
+    - key.pair.2
