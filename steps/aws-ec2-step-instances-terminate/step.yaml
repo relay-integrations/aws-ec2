@@ -55,7 +55,7 @@ examples:
     spec:
       aws:
         connection: !Connection { type: aws, name: my-aws-account }
-        region: us-west-2
+        region: !Parameter awsRegion
       instanceIDs:
       - !Parameter instance-id
 - summary: Terminate multiple EC2 instances (from list)
@@ -67,7 +67,7 @@ examples:
     spec:
       aws:
         connection: !Connection { type: aws, name: my-aws-account }
-        region: us-west-2
+        region: !Parameter awsRegion
       instanceIDs:
       - i-0123456789abcdef0
       - i-abcdef0123456789a
@@ -80,5 +80,5 @@ examples:
     spec:
       aws:
         connection: !Connection { type: aws, name: my-aws-account }
-        region: us-west-2
+        region: !Parameter awsRegion
       instanceIDs: !Output {from: describe-instances, name: instanceIDs} # Modify with the Step that outputs instances
