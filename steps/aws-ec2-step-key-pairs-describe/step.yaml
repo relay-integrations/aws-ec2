@@ -46,3 +46,14 @@ schemas:
   output:
     source: file
     file: output.schema.json
+
+examples:
+- summary: Describe EC2 key pairs
+  content:
+    apiVersion: v1
+    kind: Step
+    name: describe-key-pairs
+    image: relaysh/aws-ec2-step-key-pairs-describe
+    spec:
+      aws:
+        connection: !Connection { type: aws, name: my-aws-account }
