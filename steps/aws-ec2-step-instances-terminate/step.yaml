@@ -71,14 +71,3 @@ examples:
       instanceIDs:
       - i-0123456789abcdef0
       - i-abcdef0123456789a
-- summary: Terminate multiple EC2 instances (from step output)
-  content:
-    apiVersion: v1
-    kind: Step
-    name: ec2-terminate-instances
-    image: relaysh/aws-ec2-step-instances-terminate
-    spec:
-      aws:
-        connection: !Connection { type: aws, name: my-aws-account }
-        region: !Parameter awsRegion
-      instanceIDs: !Output {from: describe-instances, name: instanceIDs} # Modify with the Step that outputs instances
