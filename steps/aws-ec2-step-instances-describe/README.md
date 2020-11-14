@@ -4,6 +4,9 @@ This [AWS EC2](https://aws.amazon.com/ec2/) step container lists the instances
 in an AWS region and sets an output, `instances`, to an array containing
 information about them.
 
+Optionally add filters to narrow the list of returned instances based on filter
+criteria. [Full list of filters found here](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeInstances.html).
+
 ## Example output `instances`
 ```
 [

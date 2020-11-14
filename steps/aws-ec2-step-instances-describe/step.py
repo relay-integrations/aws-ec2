@@ -31,9 +31,26 @@ sess = boto3.Session(
   region_name=relay.get(D.aws.region),
   aws_session_token=session_token
 )
+
+list_of_filters = []
+try:
+  raw_filters = relay.get(D.filters)
+  for key, value in raw_filters.items():
+    f = {}
+    f['Name'] = key
+    f['Values'] = [value]
+    list_of_filters.append(f)
+except:
+  pass
   
 ec2 = sess.resource('ec2')
-raw_instances = ec2.instances.all()
+
+# Get instances
+raw_instances = None
+if (len(list_of_filters) != 0): 
+  raw_instances = ec2.instances.filter(Filters=list_of_filters)
+else: 
+  raw_instances = ec2.instances.all()
 
 instance_list = [instance for instance in raw_instances]
 if (len(instance_list) == 0):
@@ -44,7 +61,7 @@ print('Found the following EC2 instances:\n')
 print("{:<30} {:<30} {:<30}".format('ID', 'STATE', 'TYPE'))
 for instance in raw_instances:
   print("{:<30} {:<30} {:<30}".format(instance.instance_id, instance.state['Name'], instance.instance_type))
-instances = list(map(partial(instance_to_dict, ec2), ec2.instances.all()))
+instances = list(map(partial(instance_to_dict, ec2), raw_instances))
 
 print('\nAdding {0} instance(s) to the output `instances`'.format(len(instances)))
 relay.outputs.set('instances', instances)
