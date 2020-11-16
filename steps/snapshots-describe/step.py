@@ -32,10 +32,13 @@ sess = boto3.Session(
   aws_session_token=session_token
 )
 
-owner_ids = relay.get(D.ownerIDs)
+owner_ids = "self" 
 
-if (len(owner_ids) == 0):
-  owner_ids = "self"
+try:
+  relay.get(D.ownerIDs)
+except: 
+  print("No owner ids provided. Defaulting to: ", owner_ids)
+
 
 ec2 = sess.resource('ec2')
 raw_snapshots = ec2.snapshots.filter(OwnerIds=[owner_ids])
