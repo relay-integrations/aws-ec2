@@ -48,7 +48,7 @@ schemas:
     file: output.schema.json
 
 examples:
-- summary: Describe EC2 instances
+- summary: Describe all EC2 instances
   content:
     apiVersion: v1
     kind: Step
@@ -58,3 +58,39 @@ examples:
       aws:
         connection: !Connection { type: aws, name: my-aws-account }
         region: !Parameter awsRegion
+- summary: List running EC2 instances
+  content:
+    apiVersion: v1
+    kind: Step
+    name: describe-instances
+    image: relaysh/aws-ec2-step-instances-describe
+    spec:
+      aws:
+        connection: !Connection { type: aws, name: my-aws-account }
+        region: !Parameter awsRegion
+      filters:
+        instanceStateName: "running"
+- summary: List EC2 instances created by a specified keypair
+  content:
+    apiVersion: v1
+    kind: Step
+    name: describe-instances
+    image: relaysh/aws-ec2-step-instances-describe
+    spec:
+      aws:
+        connection: !Connection { type: aws, name: my-aws-account }
+        region: !Parameter awsRegion
+      filters:
+        keyName: !Parameter keyName
+- summary: List EC2 instances with specified DNS name
+  content:
+    apiVersion: v1
+    kind: Step
+    name: describe-instances
+    image: relaysh/aws-ec2-step-instances-describe
+    spec:
+      aws:
+        connection: !Connection { type: aws, name: my-aws-account }
+        region: !Parameter awsRegion
+      filters:
+        dnsName: !Parameter instanceDnsName

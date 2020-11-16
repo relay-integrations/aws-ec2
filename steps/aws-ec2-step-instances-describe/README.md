@@ -4,6 +4,10 @@ This [AWS EC2](https://aws.amazon.com/ec2/) step container lists the instances
 in an AWS region and sets an output, `instances`, to an array containing
 information about them.
 
+Optionally add filters to narrow the list of returned instances based on filter
+criteria. 
+
+
 ## Example output `instances`
 ```
 [
@@ -144,3 +148,19 @@ information about them.
    ...
 ]
 ```
+
+## Filters
+You can narrow down the results of instances by passing a filter. Here are some common ones:  
+
+- `affinity` - The affinity setting for an instance running on a Dedicated Host (default | host).
+- `architecture` - The instance architecture (i386 | x86_64 | arm64).
+- `availabilityZone` - The Availability Zone of the instance.
+- `dnsName` - The public DNS name of the instance.
+- `blockDeviceMapping.volumeId` - The volume ID of the EBS volume
+- `instanceId` - The ID of the instance
+- `instanceLifecycle` - Indicates whether this is a Spot Instance or Scheduled instance (spot | scheduled).
+- `instanceType` - The type of instance (for example, t2.micro)
+- `instanceStateName` - State of the instance (pending | running | shutting-down | terminated | stopping | stopped)
+- `vpcId` - The ID of the VPC that the instance is running in.
+
+For the full list, check out the [AWS documentation here](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeInstances.html). Note, filters are camelCased in your Relay workflow. 
