@@ -14,12 +14,12 @@ name: snapshots-describe
 version: 1
 
 # High-level phrase describing what this action does. Required.
-summary: Describe EC2 snapshots
+summary: Describe EC2 EBS snapshots
 
 # Single-paragraph explanation of what this action does in more detail.
 # Optional. Markdown.
 description: |
-  Lists the instances in the provided AWS region.
+  Lists the EC2 EBS snapshots in the provided AWS region and account.
 
 # URL or path relative to this file to an icon or icons representing this
 # action. Optional. Defaults to the integration icon.
@@ -48,7 +48,7 @@ schemas:
     file: output.schema.json
 
 examples:
-- summary: Describe EC2 snapshots
+- summary: Describe EC2 EBS snapshots
   content:
     apiVersion: v1
     kind: Step

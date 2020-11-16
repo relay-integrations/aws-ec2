@@ -30,17 +30,17 @@
 					"description": "The AWS region to use (for example, us-west-2)"
         }
       },
-      "ownerIDs": {
-        "type": "string",
-        "description": "Scopes the results to snapshots with the specified owners. You can specify a combination of AWS account IDs, self , and amazon.",
-        "default": "self"
-      },
 			"required": [
 				"connection",
 				"region"
 			]
-		}
-	},
+    },
+    "ownerIDs": {
+      "type": "string",
+      "description": "Scopes the results to snapshots with the specified owners. You can specify a combination of AWS account IDs, self , and amazon.",
+      "default": "self"
+    }
+  },
 	"required": [
 		"aws"
 	],
