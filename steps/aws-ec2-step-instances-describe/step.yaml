@@ -69,7 +69,7 @@ examples:
         connection: !Connection { type: aws, name: my-aws-account }
         region: !Parameter awsRegion
       filters:
-        instance-state-name: "running"
+        instanceStateName: "running"
 - summary: List EC2 instances created by a specified keypair
   content:
     apiVersion: v1
@@ -81,7 +81,7 @@ examples:
         connection: !Connection { type: aws, name: my-aws-account }
         region: !Parameter awsRegion
       filters:
-        key-name: !Parameter keyName
+        keyName: !Parameter keyName
 - summary: List EC2 instances with specified DNS name
   content:
     apiVersion: v1
@@ -93,4 +93,4 @@ examples:
         connection: !Connection { type: aws, name: my-aws-account }
         region: !Parameter awsRegion
       filters:
-        dns-name: !Parameter instanceDnsName
+        dnsName: !Parameter instanceDnsName

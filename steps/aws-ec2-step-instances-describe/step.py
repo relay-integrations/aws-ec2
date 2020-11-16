@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 from functools import partial
-
+import re
 import boto3
 from nebula_sdk import Interface, Dynamic as D
 
@@ -34,10 +34,12 @@ sess = boto3.Session(
 
 list_of_filters = []
 try:
+  pattern = re.compile(r'(?<!^)(?=[A-Z])')
+
   raw_filters = relay.get(D.filters)
   for key, value in raw_filters.items():
     f = {}
-    f['Name'] = key
+    f['Name'] = pattern.sub('-', key).lower()
     f['Values'] = [value]
     list_of_filters.append(f)
 except requests.exceptions.HTTPError as e:
