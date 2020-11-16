@@ -40,8 +40,11 @@ try:
     f['Name'] = key
     f['Values'] = [value]
     list_of_filters.append(f)
-except:
-  pass
+except requests.exceptions.HTTPError as e:
+    if e.response.status_code == 422:
+        pass
+    else:
+        raise
   
 ec2 = sess.resource('ec2')
 
