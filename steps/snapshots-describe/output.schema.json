@@ -2,16 +2,16 @@
 	"$schema": "http://json-schema.org/draft-07/schema#",
 	"type": "object",
 	"properties": {
-		"instances": {
+		"snapshots": {
 			"type": "array",
 			"items": {
 				"type": "object"
 			},
-			"description": "The EC2 instances in the given region."
+			"description": "The EBS snapshots in the given region."
 		}
 	},
 	"required": [
-		"instances"
+		"snapshots"
 	],
 	"additionalProperties": false
 }
