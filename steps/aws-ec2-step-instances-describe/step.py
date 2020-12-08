@@ -1,8 +1,11 @@
 #!/usr/bin/env python
-from functools import partial
 import re
+from functools import partial
+
 import boto3
-from nebula_sdk import Interface, Dynamic as D
+import requests
+from relay_sdk import Dynamic as D
+from relay_sdk import Interface
 
 
 def instance_to_dict(ec2, instance):
