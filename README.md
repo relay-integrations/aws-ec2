@@ -1,4 +1,4 @@
-# Amazon Web Services Elastic Compute Cloud integration
+# AWS Elastic Compute Cloud integration
 
 Integration with Amazon Web Services Elastic Compute Cloud for Puppet Relay.
 
