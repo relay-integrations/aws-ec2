@@ -26,7 +26,12 @@
 					]
 				}
 			},
+			"region": {
+				"type": "string",
+				"description": "The AWS region to use (for example, us-west-2)"
+			},
 			"required": [
+				"region",
 				"connection"
 			]
 		}
