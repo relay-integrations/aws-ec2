@@ -1,6 +1,0 @@
-apiVersion: container/v1
-kind: StepContainer
-inherit: ../hack/defs/aws-python
-title: Delete AWS EC2 Key Pairs
-description: >
-  This task deletes a set of provided EC2 Key Pairs.

@@ -1,0 +1,15 @@
+connections:
+  aws/test:
+    accessKeyID: AKIASAMPLEKEY
+    secretAccessKey: 6bkpuV9fF3LX1Yo79OpfTwsw8wt5wsVLGTPJjDTu
+
+runs:
+  '1':
+    steps:
+      default:
+        spec:
+          aws:
+            connection: !Connection [aws, test]
+            region: us-west-1
+        filter: {}
+
