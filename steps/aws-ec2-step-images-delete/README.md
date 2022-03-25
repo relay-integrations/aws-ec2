@@ -1,5 +1,4 @@
-# aws-ec2-step-images-describe
-
+# aws-ec2-step-images-delete
 This [AWS EC2](https://aws.amazon.com/ec2/) step deletes the images (AMIs)
 corresponding to the image IDs passed in the input parameter `imageIDs`.
 
