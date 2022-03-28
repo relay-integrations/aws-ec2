@@ -50,7 +50,7 @@ examples:
     apiVersion: v1
     kind: Step
     name: delete-images
-    image: relaysh/aws-ec2-step-images-delete:dev
+    image: relaysh/aws-ec2-step-images-delete
     spec:
       aws:
         connection: ${connections.aws.'my-aws-account'}
