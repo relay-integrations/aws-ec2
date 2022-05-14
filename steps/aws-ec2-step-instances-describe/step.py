@@ -62,6 +62,7 @@ else:
 
 instance_list = [instance for instance in raw_instances]
 if (len(instance_list) == 0):
+    relay.outputs.set('instances', list())
     print("No instances found")
     exit(0)
 
